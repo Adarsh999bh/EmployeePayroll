@@ -7,8 +7,21 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * class that does the file operations
+ */
 public class EmployeePayrollFileIOService {
-	public static final String PAYROLL_FILE_NAME="C:\\Users\\adithya.shenoy_ymedi\\eclipse-workspace\\fileio\\src\\main\\java\\Com\\user\\fileoperation\\fileio\\payroll-file.txt";
+
+	/**
+	 * file path madee final
+	 */
+	public static final String PAYROLL_FILE_NAME="C:\\Users\\adarsh.bhandary_ymed\\Desktop\\bridgelabz\\EmployeePayroll\\pay\\src\\main\\java\\em\\roll\\payroll-file.txt";
+
+	/**
+	 * functipn tp write data
+	 * @param employeePayrollList
+	 */
 	public void writeData(List<EmployeePayrollData> employeePayrollList) {
 		StringBuffer empBuffer=new StringBuffer();
 		employeePayrollList.forEach(employee->{
@@ -22,6 +35,11 @@ public class EmployeePayrollFileIOService {
 			e.printStackTrace();
 		}
 	}
+	/**
+	 * functipn that cpunts the entries in the file 
+	 * and returns long
+	 * @return
+	 */
 	public long countEntries() {
 		long entries=0;
 		try {
@@ -33,6 +51,10 @@ public class EmployeePayrollFileIOService {
 		return entries;
 	}
 
+
+	/**
+	 * function to rint the data
+	 */
 	public void printData() {
 		try {
 			Files.lines(new File(PAYROLL_FILE_NAME).toPath())
