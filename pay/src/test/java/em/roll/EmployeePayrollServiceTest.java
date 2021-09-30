@@ -18,19 +18,19 @@ public class EmployeePayrollServiceTest {
         employeePayrollService.writeEmployeePayrollData(IOService.FIlE_IO);
         long entries=employeePayrollService.countEntries(IOService.FIlE_IO);
         employeePayrollService.printData();
-        assertEquals(0,entries);
+        assertEquals(3,entries);
     }
     
     @Test
     public void givenFileOnReadingFromFileShouldMatchEmployeeCount() {
         EmployeePayrollService employeePayrollService = new EmployeePayrollService();
         long entries=employeePayrollService.readEmployeePayrollData();
-        assertEquals(0,entries);
+        assertEquals(3,entries);
     }
     @Test
     public void givenFileOnReadingFromFileShouldMatchEmployeCount() {
         EmployeePayrollService employeePayrollService = new EmployeePayrollService();
         long entries=employeePayrollService.readEmployeePayrollData();
-        assertEquals(0,entries);
+        assertEquals(3,entries);
     }
 }
